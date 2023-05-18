@@ -6,4 +6,10 @@
 // xl - min-width: 1200px,
 // hd - min-width: 1600px
 
+$desktop: 992px;
 
+@mixin mobile {
+  @media (max-width:$desktop) {
+    @content;
+  }
+}
