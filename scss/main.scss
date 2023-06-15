@@ -1,6 +1,8 @@
 @import './elements/header.scss';
+@import './settings/fonts';
 
 .container {
    padding: 0 2rem;
+   font-family: $font-main;
 
 }

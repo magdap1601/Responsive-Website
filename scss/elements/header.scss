@@ -1,9 +1,14 @@
 @import '..//settings/colors';
 @import '..//generic/reset';
 @import '..//settings/variables';
+@import '../settings/fonts';
 
 .header {
     height: 70px;
+    &__logo {
+        font-size: 2rem;
+        color: $color-primary-light;
+    }
 
     &__container {
         display: flex;
@@ -12,7 +17,6 @@
         box-shadow: 0px 3px 6px #00000029;
         height: 100%;
     }
-
     .menu {
         &__btn {
             display: none;
@@ -21,7 +25,6 @@
                 ~.header__nav {
                     display: flex;
                 }
-
                 ~.menu__toggle {
                     span {
                         &:nth-child(1) {
@@ -39,7 +42,6 @@
                 }
             }
         }
-
         &__toggle {
             @include mobile {
                 span {
@@ -52,9 +54,7 @@
                 }
             }
         }
-
     }
-
     &__nav {
         display: flex;
 
@@ -75,7 +75,10 @@
             padding: 0 30px;
             cursor: pointer;
             border: 2px solid transparent;
-
+            font-size: .6875rem;
+            font-family: $font-nav;
+            letter-spacing: .205rem;
+            font-weight: bold;
             @include mobile {
                 padding: 0;
                 padding-bottom: 10px;
@@ -88,7 +91,7 @@
             color: grey;
 
             &:hover {
-                border-bottom: 3px solid blue;
+                border-bottom: 3px solid $color-primary-light;
                 color: black;
 
                 @include mobile {
@@ -96,15 +99,10 @@
                 }
             }
 
-
         }
-
         @include mobile {
             padding: 10px 0;
             border: 1px solid black;
         }
     }
-
-
-
 }

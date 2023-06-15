@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,6 +17,10 @@ li {
 
 .header {
   height: 70px;
+}
+.header__logo {
+  font-size: 2rem;
+  color: #08A6E4;
 }
 .header__container {
   display: flex;
@@ -66,6 +72,10 @@ li {
   padding: 0 30px;
   cursor: pointer;
   border: 2px solid transparent;
+  font-size: 0.6875rem;
+  font-family: "Open Sans";
+  letter-spacing: 0.205rem;
+  font-weight: bold;
 }
 @media (max-width: 992px) {
   .header .nav__element {
@@ -79,7 +89,7 @@ li {
   color: grey;
 }
 .header .nav__link:hover {
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid #08A6E4;
   color: black;
 }
 @media (max-width: 992px) {
@@ -96,5 +106,6 @@ li {
 
 .container {
   padding: 0 2rem;
+  font-family: "Raleway";
 }
 /*# sourceMappingURL=main.css.map */
