@@ -1,108 +1,108 @@
-@import '..//settings/colors';
-@import '..//generic/reset';
-@import '..//settings/variables';
-@import '../settings/fonts';
+@import "..//settings/colors";
+@import "..//generic/reset";
+@import "..//settings/variables";
+@import "../settings/fonts";
 
 .header {
-    height: 70px;
-    &__logo {
-        font-size: 2rem;
-        color: $color-primary-light;
-    }
+  height: 70px;
+  &__logo {
+    font-size: 2rem;
+    color: $color-primary-light;
+  }
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0px 3px 6px #00000029;
-        height: 100%;
-    }
-    .menu {
-        &__btn {
-            display: none;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 6px #00000029;
+    height: 100%;
+  }
+  .menu {
+    &__btn {
+      display: none;
 
-            &:checked {
-                ~.header__nav {
-                    display: flex;
-                }
-                ~.menu__toggle {
-                    span {
-                        &:nth-child(1) {
-                            transform: rotate(45deg) translate(2px, 5px);
-                        }
-
-                        &:nth-child(2) {
-                            opacity: 0;
-                        }
-
-                        &:nth-child(3) {
-                            transform: rotate(-45deg) translate(2px, -5px);
-                        }
-                    }
-                }
-            }
+      &:checked {
+        ~ .header__nav {
+          display: flex;
         }
-        &__toggle {
-            @include mobile {
-                span {
-                    display: block;
-                    width: 20px;
-                    height: 2px;
-                    background: black;
-                    margin-bottom: 3px;
-                    transition: .3s all ease-in-out;
-                }
+        ~ .menu__toggle {
+          span {
+            &:nth-child(1) {
+              transform: rotate(45deg) translate(2px, 5px);
             }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              transform: rotate(-45deg) translate(2px, -5px);
+            }
+          }
         }
+      }
     }
-    &__nav {
-        display: flex;
+    &__toggle {
+      @include mobile {
+        span {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: black;
+          margin-bottom: 3px;
+          transition: 0.3s all ease-in-out;
+        }
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+
+    @include mobile {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 75px;
+      left: 2rem;
+      width: 100%;
+      padding: 20px 0;
+      background: white;
+      height: 175px;
+    }
+  }
+
+  .nav {
+    &__element {
+      padding: 0 30px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      font-size: 0.6875rem;
+      font-family: $font-nav;
+      letter-spacing: 0.205rem;
+      font-weight: bold;
+      @include mobile {
+        padding: 0;
+        padding-bottom: 10px;
+      }
+    }
+
+    &__link {
+      padding-bottom: 27px;
+      border: 3px solid transparent;
+      color: grey;
+
+      &:hover {
+        border-bottom: 3px solid $color-primary-light;
+        color: black;
 
         @include mobile {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 70px;
-            left: 2rem;
-            width: 100%;
-            padding: 20px 0;
+          border: 3px solid transparent;
         }
+      }
     }
-
-    .nav {
-
-        &__element {
-            padding: 0 30px;
-            cursor: pointer;
-            border: 2px solid transparent;
-            font-size: .6875rem;
-            font-family: $font-nav;
-            letter-spacing: .205rem;
-            font-weight: bold;
-            @include mobile {
-                padding: 0;
-                padding-bottom: 10px;
-            }
-        }
-
-        &__link {
-            padding-bottom: 27px;
-            border: 3px solid transparent;
-            color: grey;
-
-            &:hover {
-                border-bottom: 3px solid $color-primary-light;
-                color: black;
-
-                @include mobile {
-                    border: 3px solid transparent;
-                }
-            }
-
-        }
-        @include mobile {
-            padding: 10px 0;
-            border: 1px solid black;
-        }
+    @include mobile {
+      padding: 10px 0;
+      border: 1px solid black;
     }
+  }
 }

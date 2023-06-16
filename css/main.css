@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -62,10 +64,12 @@ li {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 75px;
     left: 2rem;
     width: 100%;
     padding: 20px 0;
+    background: white;
+    height: 175px;
   }
 }
 .header .nav__element {
@@ -104,8 +108,69 @@ li {
   }
 }
 
+.btn {
+  font-family: "Open Sans";
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 40px;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.1607843137);
+  border: none;
+  cursor: pointer;
+}
+.btn--blue {
+  background: #08A6E4;
+}
+.btn--big {
+  padding: 22px 157px;
+  margin-top: 38px;
+}
+@media (max-width: 992px) {
+  .btn--big {
+    padding: 22px 92px;
+  }
+}
+
+.opening {
+  font-family: "Raleway";
+  padding-top: 8.125rem;
+  text-align: center;
+}
+.opening__header {
+  font-size: 3.0625rem;
+  padding-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .opening__header {
+    font-size: 2.1875rem;
+  }
+}
+.opening__pargh {
+  padding-bottom: 38px;
+}
+@media (max-width: 992px) {
+  .opening__pargh {
+    width: 100%;
+    padding: 0 100px;
+    position: center;
+  }
+}
+.opening__image {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .opening__image {
+    width: 220%;
+    transform: translateX(-28%);
+  }
+}
+
 .container {
   padding: 0 2rem;
   font-family: "Raleway";
+}
+
+p {
+  font-family: "Open Sans";
 }
 /*# sourceMappingURL=main.css.map */

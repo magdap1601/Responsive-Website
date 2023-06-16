@@ -1,0 +1,22 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.btn {
+   font-family:$font-nav;
+   color: #FFFFFF;
+   font-weight: bold;
+   border-radius: 40px;
+    box-shadow: 5px 10px 14px $color-buttonBlue-shadow;
+    border: none;
+    cursor: pointer;
+   &--blue {
+      background: $color-primary-light;
+   }
+   &--big {
+      padding: 22px 157px;
+      margin-top: 38px;
+      @include mobile {
+        padding: 22px 92px;
+      }
+   }
+}

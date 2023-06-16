@@ -1,8 +1,12 @@
-@import './elements/header.scss';
-@import './settings/fonts';
+@import "./elements/header.scss";
+@import "./settings/fonts";
+@import "./elements/opening.scss";
+@import "./settings/colors";
 
 .container {
-   padding: 0 2rem;
-   font-family: $font-main;
-
+  padding: 0 2rem;
+  font-family: $font-main;
+}
+p {
+  font-family: $font-nav;
 }
