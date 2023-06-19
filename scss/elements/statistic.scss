@@ -1,0 +1,118 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "../settings/fonts";
+.statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__header {
+    font-size: 2.25rem;
+    font-weight: normal;
+
+    @include mobile {
+      width: 300px;
+      max-width: 100%;
+      text-align: center;
+      font-size: 1.875rem;
+    }
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    padding-top: 70px;
+    @include mobile {
+      padding-top: 0;
+      height: 550px;
+      flex-direction: column;
+      align-content: space-evenly;
+      &:first-of-type {
+        margin-top: 25px;
+      }
+    }
+  }
+  &__singleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .singleBox {
+    &__number {
+      font-family: $font-main;
+      padding-top: 14px;
+      letter-spacing: 0.3725rem;
+      font-weight: 800;
+      line-height: 1.5rem;
+      font-size: 1.25rem;
+    }
+    &__text {
+      font-family: $font-main;
+      padding-top: 19px;
+      color: $color-grey;
+      text-align: center;
+      font-size: 1.0625rem;
+      line-height: 1.25rem;
+    }
+
+    &__shape {
+      width: 61.75px;
+      height: 61.75px;
+      border-radius: 50%;
+      padding-bottom: 14px;
+      &--pink {
+        background: $color-pink;
+        &::after {
+          content: "";
+          background-image: url("/assets/Person@2x.png");
+          position: relative;
+          top: 5px;
+          left: 30px;
+          display: inline-block;
+          background-size: 44px 50px;
+          width: 44px;
+          height: 50px;
+          @include mobile {
+            background-image: url("/assets/Person.png");
+          }
+        }
+      }
+      &--blue {
+        background-color: $color-primary-light;
+        &::after {
+          content: "";
+          background-image: url("/assets/Eye@2x.png");
+          position: relative;
+          top: 14px;
+          left: 20px;
+          display: inline-block;
+          background-size: 65.43px 36.5px;
+          width: 65.43px;
+          height: 36.5px;
+          @include mobile {
+            background-image: url("/assets/Eye.png");
+          }
+        }
+      }
+      &--green {
+        background: $color-green;
+        &::after {
+          content: "";
+          background-image: url("/assets/Catalog@2x.png");
+          position: relative;
+          top: 5px;
+          left: 29px;
+          display: inline-block;
+          background-size: 52px 48px;
+          width: 52px;
+          height: 48px;
+          @include mobile {
+            background-image: url("/assets/Catalog.png");
+          }
+        }
+      }
+    }
+  }
+}
